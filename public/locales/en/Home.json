@@ -1,6 +1,6 @@
 {
   "Header1": "Webhooks Sample App",
-  "Header2": "Discover how the Docusign Connect webhook service can help you monitor and automate your business processes through real-time updates when specific events are triggered in your workflows.",
+  "Header2": "Discover how the Docusign Connect webhook service can help you monitor and automate your business processes through real-time updates when specific events are triggered in your workflows. This sample app uses JWT authentication.",
   "SandBoxButton": "Create Developer Account",
   "LearnMoreButton": "Learn More",
   "Card1": {
