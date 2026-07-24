@@ -21,7 +21,7 @@ The Webhooks Sample App demonstrates the following:
 * A Docusign developer account. Create a [free account](https://go.docusign.com/o/sandbox/).
 * A Docusign integration key (client ID) that is configured to use JSON Web Token (JWT) Grant.
   You will need the **integration key** itself and its **RSA key pair**. Copy your **RSA key pair** into a file in your config folder `config/docusign_private_key.txt`. You must also add your application's **Redirect URI** to your integration key. To run the app locally, this should be `http://localhost:3000/auth/docusign/callback`. This [**video**](https://www.youtube.com/watch?v=GgDqa7-L0yo) demonstrates how to create an integration key (client ID) for a user application like this example.
-* [Ruby 3.1.2](https://www.ruby-lang.org/en/downloads/)
+* [Ruby 3.4.10](https://www.ruby-lang.org/en/downloads/)
 * [Node.js](https://nodejs.org/) v16+
 
 ### Required variables for `config/appsettings.yml`
@@ -149,8 +149,8 @@ https://rvm.io/rvm/install
 ```
 #### Install appropriate version of ruby
 ```
-rvm install ruby-3.1.2
-rvm use 3.1.2
+rvm install ruby-3.4.10
+rvm use 3.4.10
 ```
 #### Install redis
 On Linux
