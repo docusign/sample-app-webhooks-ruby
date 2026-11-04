@@ -22,7 +22,7 @@ The Webhooks Sample App demonstrates the following:
 * A Docusign integration key (client ID) that is configured to use JSON Web Token (JWT) Grant.
   You will need the **integration key** itself and its **RSA key pair**. Copy your **RSA key pair** into a file in your config folder `config/docusign_private_key.txt`. You must also add your application's **Redirect URI** to your integration key. To run the app locally, this should be `http://localhost:3000/auth/docusign/callback`. This [**video**](https://www.youtube.com/watch?v=GgDqa7-L0yo) demonstrates how to create an integration key (client ID) for a user application like this example.
 * [Ruby 3.4.10](https://www.ruby-lang.org/en/downloads/)
-* [Node.js](https://nodejs.org/) v16+
+* [Node.js](https://nodejs.org/) `^22.23.4`, `^24.22.1`, `^26.12.1` or higher
 
 ### Required variables for `config/appsettings.yml`
 
@@ -191,7 +191,7 @@ bundle exec rake db:create
 bundle exec rake db:migrate
 ```
 #### Install node modules
-Use NVM https://github.com/nvm-sh/nvm and Node.js version 16+.
+Use NVM https://github.com/nvm-sh/nvm and Node.js version `^22.23.4`, `^24.22.1`, `^26.12.1` or higher (`nvm install` and `nvm use` read `.nvmrc`).
 ```
 yarn install
 ```

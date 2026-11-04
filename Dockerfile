@@ -1,8 +1,10 @@
-FROM ruby:latest
+FROM ruby:3.4.10-bookworm
 
 # ENV BUNDLER_VERSION=2.0.2
 
 RUN apt-get update -qq \
+&& apt-get install -y ca-certificates curl gnupg \
+&& curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
 && apt-get install -y nodejs
 
 RUN apt remove cmdtest
@@ -11,14 +13,13 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
 RUN apt-get update -qq
 RUN apt install yarn -y
-RUN apt install npm -y
 RUN apt install postgresql-client -y
 RUN gem install bundler
 RUN apt-get install -y dos2unix
 
 WORKDIR /app
 
-COPY package.json yarn.lock Gemfile Gemfile.lock ./
+COPY package.json yarn.lock .npmrc Gemfile Gemfile.lock ./
 
 RUN npm install -g sass
 RUN npm install -g esbuild
